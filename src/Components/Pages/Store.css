@@ -1,0 +1,19 @@
+/* App.css */
+.container {
+    height: 300vh; /* Increase the height to make scrolling possible */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .animate-fade-in {
+    opacity: 0;
+    transform: translateY(-40px);
+    transition: opacity 5s ease-out, transform 0.6s ease-out;
+  }
+  
+  .animate-fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

@@ -1,3 +1,4 @@
+import JoinCommunity from "../Helper/JoinCommunity";
 import Layout from "../Layout";
 
 function Service(){
@@ -5,6 +6,8 @@ function Service(){
         <Layout>
 
             Service
+
+            <JoinCommunity/>
         </Layout>
     )
 }

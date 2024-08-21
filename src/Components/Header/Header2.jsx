@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 
 function Header2() {
     return (
-        <div className="flex justify-between items-center py-5 px-5 md:px-14 xl:px-44 shadow-md">
+        <div className="flex justify-between items-center py-5 px-5 md:px-14 xl:px-44 shadow-md sticky top-0 bg-white z-50">
             <div className="w-60 mr-16">
                 <img
                     src="https://logisticsamazone.in/wp-content/uploads/2023/07/amazon-removebg-preview-removebg-preview-1-removebg-preview-1.png"
@@ -20,7 +20,7 @@ function Header2() {
                             {renderNavItems()}
                         </ul>
 
-                        <button className="bg-red-600 py-2 px-4 text-white font-bold">
+                        <button className="bg-red-600 py-2 px-4 text-white font-bold  hover:animate-bounce">
                             Apply Now
                         </button>
 
