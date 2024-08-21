@@ -1,15 +1,33 @@
 import './App.css';
-import { FaReact } from "react-icons/fa";
-import Header from './Components/Header/Header';
-import Header2 from './Components/Header/Header2';
-import Footer from './Components/Footer/Footer';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './Components/Pages/Home';
+import About from './Components/Pages/About';
+import Service from './Components/Pages/Service';
+import Opportunity from './Components/Pages/Opportunity';
+import Store from './Components/Pages/Store';
+import Contact from './Components/Pages/Contact';
+
+
 
 function App() {
   return (
     <div className="App h-[100vh]">
-      <Header/>
-      <Header2/>
-      <Footer/>
+
+      <Router>
+
+        
+        <Routes>
+          <Route path='/' element={<Home/>} />
+          <Route path='/about' element={<About/>} />
+          <Route path='/contact-us' element={<Contact/>} />
+          <Route path='/store' element={<Store/>} />
+          <Route path='/opportunity' element={<Opportunity/>} />
+          <Route path='/service' element={<Service/>} />
+        </Routes>
+      </Router>
+
+      
     </div>
   );
 }

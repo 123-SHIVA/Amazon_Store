@@ -1,5 +1,6 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
+import { Link, NavLink } from "react-router-dom";
 
 function Header2() {
     return (
@@ -46,12 +47,12 @@ function Header2() {
 function renderNavItems() {
     return (
         <>
-            <li className="px-3  lg:border-r-2  border-r-black border-dotted ">Home</li>
-            <li className="px-3  lg:border-r-2  border-r-black border-dotted ">About Us</li>
-            <li className="px-3  lg:border-r-2  border-r-black border-dotted ">Opportunity</li>
-            <li className="px-3  lg:border-r-2  border-r-black border-dotted ">Contact Us</li>
-            <li className="px-3  lg:border-r-2  border-r-black border-dotted ">Service</li>
-            <li className="px-3">Store</li>
+            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Home</NavLink></li>
+            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/about"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >About Us</NavLink></li>
+            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/opportunity"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Opportunity</NavLink></li>
+            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/contact-us"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Contact Us</NavLink></li>
+            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/service"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Service</NavLink></li>
+            <li className="px-3  "><NavLink to={"/store"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Store</NavLink></li>
            
         </>
     );
