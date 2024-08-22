@@ -1,6 +1,7 @@
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
+import { IoIosArrowDown } from "react-icons/io";
 
 function Header2() {
     return (
@@ -20,7 +21,7 @@ function Header2() {
                             {renderNavItems()}
                         </ul>
 
-                        <button className="bg-red-600 py-2 px-4 text-white font-bold  hover:animate-bounce">
+                        <button className="bg-red-600 py-2 px-4 text-sm text-white font-semibold  hover:animate-bounce">
                             Apply Now
                         </button>
 
@@ -34,7 +35,7 @@ function Header2() {
                     {/* Drawer Navigation */}
                     <div className="drawer-side">
                         <ul className="menu w-[100vw] bg-white text-black lg:bg-transparent py-10 gap-3 text-sm  font-semibold min-h-full ">
-                        <label htmlFor="my-drawer" className="drawer-overlay border flex justify-end px-5 text-2xl"><IoClose/></label>
+                            <label htmlFor="my-drawer" className="drawer-overlay border flex justify-end px-5 text-2xl"><IoClose /></label>
                             {renderNavItems()}
                         </ul>
                     </div>
@@ -47,13 +48,24 @@ function Header2() {
 function renderNavItems() {
     return (
         <>
-            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Home</NavLink></li>
-            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/about"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >About Us</NavLink></li>
-            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/opportunity"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Opportunity</NavLink></li>
-            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/contact-us"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Contact Us</NavLink></li>
-            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/service"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Service</NavLink></li>
-            <li className="px-3  "><NavLink to={"/store"} className={({isActive})=>(`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Store</NavLink></li>
-           
+            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/"} className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Home</NavLink></li>
+            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/about"} className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >About Us</NavLink></li>
+            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/opportunity"} className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Opportunity</NavLink></li>
+            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/contact-us"} className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Contact Us</NavLink></li>
+            <li className="px-3  lg:border-r-2  border-r-black border-dotted "><NavLink to={"/service"} className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}  >Service</NavLink></li>
+            
+            <div className="dropdown dropdown-hover mr-5 ">
+                
+                <li tabIndex={0} role="button" className="px-3  "><NavLink to={"/store"} className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 flex gap-3 items-center`)}>Store <IoIosArrowDown/></NavLink></li>
+                <ul tabIndex={0} className="dropdown-content menu z-[1] w-52 p-2 shadow ">
+                    <div className="p-2 border-t-2 my-2 border-red-600 bg-white relative">
+                        <div className="w-3 h-3 border-t-2 border-l-2 bg-white border-red-500 rotate-45 absolute -top-2 left-3"></div>
+                        <Link to="/login" >Login</Link>
+
+                    </div>
+                    
+                </ul>
+            </div>
         </>
     );
 }
