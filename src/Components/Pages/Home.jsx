@@ -51,7 +51,7 @@ const benefitsModelData=[
 function Home() {
     return (
         <Layout >
-            <section className='my-10'>
+            <section className='my-10 '>
                 <Swiper
                     spaceBetween={30}
                     effect={'fade'}
@@ -80,46 +80,46 @@ function Home() {
                 </Swiper>
             </section>
 
-            <section className='w-[80%] m-auto my-10 flex items-center text-[#54595F] '  >
-                <div className='w-[20%] ml-32'>
+            <section className='lg:w-[80%]  m-auto my-10 flex flex-col md:flex-row border justify-center items-center text-[#54595F] '  >
+                <div className='max-w-[50%]  p-5 '>
                     <img src={logisticLogo} alt='logistic logo' className='w-full rounded-full border-4 border-orange-400' />
                 </div>
 
-                <div className='w-[70%] text-center'>
+                <div className='md:w-[70%] text-center'>
                     <h3 className='font-bold text-2xl'>Amazon Services</h3>
                     <h1 className='text-4xl font-bold my-3'>Amazon Logistics Estore</h1>
                     <p className='text-sm mt-5 mx-10 tracking-tighter '>Amazon Logistics store is an India First initiative which enables entrepreneurs to offer online shopping assistance to new-to-ecommerce audiences. Shopping assistance provided by store owners establishes a sense of trust and helps lakhs of customers take their first steps into e-commerce.</p>
                 </div>
             </section>
 
-            <section className='text-[#54595F] flex items-center justify-center w-[75%] m-auto my-20 text-center'>
-                <div className='w-[50%]'>
+            <section className='text-[#54595F] flex flex-col md:flex-row items-center justify-center lg:w-[75%] m-auto my-20 text-center'>
+                <div className='md:w-[50%]'>
                     <h3 className='font-bold text-2xl'>Amazon Estore</h3>
                     <h1 className='text-4xl font-bold my-3'>Looking to set up an Amazon Logistics Estore?</h1>
                     <h5 className='text-xl font-bold mt-5 text-[#777d85] '>Key banefits </h5>
                     <ul className='text-sm leading-6 mt-3 list-disc'>
-                        <li><eiv className='flex justify-center items-center gap-1 '><FaRegCheckCircle /><p>Earn on every order</p></eiv></li>
+                        <li><div className='flex justify-center items-center gap-1 '><FaRegCheckCircle /><p>Earn on every order</p></div></li>
                         <li><div className='flex justify-center items-center gap-1 '><FaRegCheckCircle /><p>Low Merchandise management</p></div></li>
                         <li><div className='flex justify-center items-center gap-1 '><FaRegCheckCircle /><p>High earning potential with Incentives</p></div></li>
                         <li><div className='flex justify-center items-center gap-1 '><FaRegCheckCircle /><p>Standardized Branding & Premium look and feel</p></div></li>
                     </ul>
 
                 </div>
-                <div className='w-[35%]'>
+                <div className='md:w-[35%] max-w-[50%]'>
                     <img src={estoreImg} alt='estore' />
                 </div>
             </section >
 
-            <section className='text-[#54595F] flex items-center justify-center w-[75%] m-auto my-5 text-center'>
-                <div className='w-[35%]'>
+            <section className='text-[#54595F] flex flex-col md:flex-row  items-center justify-center lg:w-[75%] m-auto my-10 text-center'>
+                <div className='md:w-[35%] max-w-[50%]'>
                     <img src={benefitsImg} alt='benefits' />
                 </div>
 
-                <div className='w-[50%] ml-10'>
+                <div className='md:w-[50%] ml-10'>
                     <h3 className='font-bold text-2xl'>Our Benefits</h3>
                     <h1 className='text-4xl font-bold my-3'>Benefits of partnering with Amazon logistics Estore?</h1>
                     <ul className='text-sm leading-6 mt-3 list-disc'>
-                        <li><eiv className='flex justify-center items-center gap-1 '><FaRegCheckCircle /><p>Enable your network of stores with Assisted shopping Services</p></eiv></li>
+                        <li><div className='flex justify-center items-center gap-1 '><FaRegCheckCircle /><p>Enable your network of stores with Assisted shopping Services</p></div></li>
                         <li><div className='flex justify-center items-center gap-1 '><FaRegCheckCircle /><p>Earn Commissions on Each order</p></div></li>
                         <li><div className='flex justify-center items-center gap-1 '><FaRegCheckCircle /><p>Earn better with every Walk-in</p></div></li>
                         <li><div className='flex justify-center items-center gap-1 '><FaRegCheckCircle /><p>High earning potential with Incentives</p></div></li>
@@ -128,9 +128,9 @@ function Home() {
                 </div>
             </section>
 
-            <section className='text-[#54595F] w-[75%] m-auto my-5 text-center'>
+            <section className='text-[#54595F] lg:w-[75%] m-auto my-5 text-center'>
                 <h1 className='text-3xl font-bold my-3'>Benefits Of Franchise Digital Model</h1>
-                <div className='flex flex-wrap justify-center gap-6 mt-10 text-sm'>
+                <div className='flex flex-col md:flex-row flex-wrap justify-center gap-6 mt-10 text-sm'>
                     {
                         benefitsModelData.map((item, index)=>{
                             return(
@@ -151,7 +151,7 @@ function Home() {
 function BenefitsModelCard({item}){
     return(
         
-        <div className='w-[30%]' >
+        <div className='md:w-[30%]' >
             <h3 className="font-bold text-xl  mb-3">{item.heading}</h3>
             <p>{item.Para}</p>
         </div>

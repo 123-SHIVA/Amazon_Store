@@ -16,7 +16,7 @@ function Opportunity(){
                     <img src={teamLeaderImg} alt="Opportunity Img" className="bg-contain w-[97%]  h-[70vh] m-auto"/>
                     <img src={thisOpportunityForYou} alt="Opportunity Img" className="bg-contain  h-[70vh] w-[97%] m-auto"/>
                 </div>
-                <div className="grid grid-cols-2 items-center  w-[70%] m-auto mb-16 ">
+                <div className="grid  grid-cols-1 md:grid-cols-2 items-center  w-[70%] m-auto md:my-16 my-20 ">
                     <img src={venImg} alt="ven img" />
                     <div className="text-center font-bold ">
                         <h2>Your success story starts here.</h2>

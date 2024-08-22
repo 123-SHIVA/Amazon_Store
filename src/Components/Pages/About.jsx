@@ -23,9 +23,9 @@ const ourMissionData = [
 function About() {
   return (
     <Layout className="bg-white">
-      <div className=" my-20 m-auto w-[70%] text-gray-700">
-        <h1 class="mb-4 p-2 font-bold text-lg">ABOUT US</h1>
-        <p class="mb-6 p-2 text-sm">
+      <div className=" my-20 mx-10 lg:m-auto lg:w-[70%] text-gray-700">
+        <h1 className="mb-4 p-2 font-bold text-lg">ABOUT US</h1>
+        <p className="mb-6 p-2 text-sm">
           Amazon Logistics Estore Ltd is the most trusted brand that works in multiple verticals of the Government sector, BPO, Digital Marketing, Holiday Planning, and Interior Designing. We provide elite services that no one else can offer. We assist in the development of businesses with a backend support team for our clients, offering rich knowledge and high analytical skills. <br /><br />
           We design spaces according to our client’s requirements and also create packages for travelers so they can fulfill their dream projects of exploration. <br /><br />
           We are proud to announce that we have over 15,000 franchises nationwide that are successfully helping to transform business ideas into developed businesses. We are the only authorized Mudra Yojna application provider across India with 1.4 million happy and satisfied customers. <br /><br />

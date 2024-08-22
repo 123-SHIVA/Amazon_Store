@@ -41,13 +41,13 @@ function Service(){
 
     
 
-            <section className='text-[#54595F] w-[75%] m-auto my-10 '>
+            <section className='text-[#54595F] w-[90%] md:w-[75%] m-auto my-10 '>
                 <div>
                     <h1 className='text-3xl font-bold my-3 text-center'>Franchise Store</h1>
                     <h3 className="text-lg font-semibold my-3">With Just Simple Procedure Get Franchise Store Partnered With Amazon Logistics Estore</h3>
                     <p className="text-sm leading-5">The opportunity to earn with minimum investment & low inventory needed. Every store owner in a rural area can get the benefit of receiving proper marketing assistance & branding material for their store. Also receiving timely incentives so that they can earn more profit. Having the opportunity to earn income along with other sources of income.</p>
                 </div>
-                <div className='flex flex-wrap justify-center gap-6 mt-10 text-sm'>
+                <div className='flex flex-col md:flex-row flex-wrap justify-center gap-6 mt-10 text-sm'>
                     {
                         benefitsModelData.map((item, index)=>{
                             return(
@@ -58,7 +58,7 @@ function Service(){
                 </div>
             </section>
 
-            <section className='text-[#54595F] w-[70%] m-auto my-16 text-sm '>
+            <section className='text-[#54595F] w-[90%] md:w-[70%] m-auto my-16 text-sm '>
                 <h1 className='text-3xl font-bold my-5 text-center'>Terms Of Service</h1>
                 <div>
                     <h3 className="underline text-lg">Terms and Conditions –Enrollment as Amazon Logistics store</h3>
@@ -94,7 +94,7 @@ function Service(){
 function BenefitsModelCard({item}){
     return(
         
-        <div className='w-[30%]' >
+        <div className='md:w-[30%] w-full my-5' >
             <div className="text-8xl text-red-700 flex justify-center">{item.icon}</div>
             <h3 className="font-bold text-xl text-center  mb-3">{item.heading}</h3>
             <p>{item.Para}</p>

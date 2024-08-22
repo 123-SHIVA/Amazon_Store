@@ -6,7 +6,7 @@ function Register()
     return (
         <section className=" p-5 text-[#7e858f] flex flex-col items-center">
             <img src={eStoreLogo} alt='e Store Logo' className='w-64' />
-            <div className='my-7 w-[30%] '>
+            <div className='my-7 lg:w-[30%] md:w-[50%] w-[80%] '>
                 <h1 className='text-black text-3xl font-semibold'>Create Account</h1>
                 <div className=' text-xs text-black font-semibold '>
                     {/* --------------error box---------------- */}

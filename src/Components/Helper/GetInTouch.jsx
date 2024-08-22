@@ -42,10 +42,10 @@ function GetInTouch()
 
     return(
         <>
-        <section className='w-[75%] text-[#54595F] m-auto my-12'>
+        <section className='lg:w-[75%] text-[#54595F] m-auto my-12'>
                 <h1 className='font-bold text-3xl text-orange-400 text-center'>GET IN TOUCH WITH AMAZON</h1>
-                <div className='flex items-center justify-around'>
-                    <form ref={form} onSubmit={sendEmail} className='w-[40%] text-xs text-black font-semibold '>
+                <div className='flex flex-col md:flex-row items-center justify-around'>
+                    <form ref={form} onSubmit={sendEmail} className='md:w-[40%] text-xs text-black font-semibold '>
                     {/* --------------error box---------------- */}
                         
                         <div className={ `p-3 my-4 border-l-2 border-blue-500 rounded-sm bg-blue-100 transition-all duration-300 ${isSend ? " opacity-100": "opacity-0"}`}>Thank you for contacting us, we will be in touch shortly.</div>
@@ -74,7 +74,7 @@ function GetInTouch()
                         <input type="submit" value="Send Message" className='p-2 text-sm text-white bg-sky-500'/>
                        
                     </form>
-                    <div className='w-[30%]'>
+                    <div className='md:w-[30%] max-w-[50%]'>
                         <img src={getInTouchImg} alt='get in touch'/>
                     </div>
                 </div>

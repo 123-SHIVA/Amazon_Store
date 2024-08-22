@@ -6,7 +6,7 @@ function Login() {
         <section className=" h-[100vh] p-5 text-[#757a7f] ">
             <div>
                 <img src={logisticLogo} alt='logistic logo' className='w-64 m-auto' />
-                <div className='w-[30%] m-auto  mt-8'>
+                <div className='lg:w-[30%] md:w-[60%] max-w-[90%] m-auto  mt-8'>
                     <h1 className='text-3xl text-center text-black font-semibold'>Sign-In</h1>
                     <div className='text-sm font-semibold'>
                         <div className='my-5'>
