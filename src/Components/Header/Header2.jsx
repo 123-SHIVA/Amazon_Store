@@ -2,15 +2,18 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { IoClose } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 import { IoIosArrowDown } from "react-icons/io";
+import eStoreLogo from "../../images/esStoreLogo.webp"
 
 function Header2() {
     return (
         <div className="flex justify-between items-center py-5 px-5 md:px-14 xl:px-44 shadow-md sticky top-0 bg-white z-50">
             <div className="w-60 mr-16">
-                <img
-                    src="https://logisticsamazone.in/wp-content/uploads/2023/07/amazon-removebg-preview-removebg-preview-1-removebg-preview-1.png"
-                    alt="Logo"
-                />
+                <Link to="/">
+                    <img
+                        src={eStoreLogo}
+                        alt="Logo"
+                        />
+                </Link>
             </div>
             <div className="flex items-center">
                 <div className="drawer">
@@ -21,9 +24,10 @@ function Header2() {
                             {renderNavItems()}
                         </ul>
 
-                        <button className="bg-red-600 py-2 px-4 text-sm text-white font-semibold  hover:animate-bounce">
+                        <Link to="/register" target="_blank" className="bg-red-600 py-2 px-4 text-sm text-white font-semibold  hover:animate-bounce">
                             Apply Now
-                        </button>
+
+                        </Link>
 
                         {/* Hamburger Menu Button */}
                         <label htmlFor="my-drawer" className="text-3xl text-black drawer-button lg:hidden">
@@ -56,7 +60,7 @@ function renderNavItems() {
             
             <div className="dropdown dropdown-hover mr-5 ">
                 
-                <li tabIndex={0} role="button" className="px-3  "><NavLink to={"/store"} className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 flex gap-3 items-center`)}>Store <IoIosArrowDown/></NavLink></li>
+                <li tabIndex={0} role="button" className="px-3  "><NavLink to={"/register"} target="_blank" className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 flex gap-3 items-center`)}>Store <IoIosArrowDown/></NavLink></li>
                 <ul tabIndex={0} className="dropdown-content menu z-[1] w-52 p-2 shadow ">
                     <div className="p-2 border-t-2 my-2 border-red-600 bg-white relative">
                         <div className="w-3 h-3 border-t-2 border-l-2 bg-white border-red-500 rotate-45 absolute -top-2 left-3"></div>

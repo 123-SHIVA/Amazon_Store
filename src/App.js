@@ -7,6 +7,8 @@ import Service from './Components/Pages/Service';
 import Opportunity from './Components/Pages/Opportunity';
 import Store from './Components/Pages/Store';
 import Contact from './Components/Pages/Contact';
+import Register from './Components/Pages/Register';
+import Login from './Components/Pages/Login';
 
 
 
@@ -24,6 +26,8 @@ function App() {
           <Route path='/store' element={<Store/>} />
           <Route path='/opportunity' element={<Opportunity/>} />
           <Route path='/service' element={<Service/>} />
+          <Route path='/register' element={<Register/>} />
+          <Route path='/login' element={<Login/>}/>
         </Routes>
       </Router>
 
