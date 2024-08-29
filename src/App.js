@@ -9,6 +9,7 @@ import Store from './Components/Pages/Store';
 import Contact from './Components/Pages/Contact';
 import Register from './Components/Pages/Register';
 import Login from './Components/Pages/Login';
+import Submission from './Components/Pages/Submission';
 
 
 
@@ -26,8 +27,10 @@ function App() {
           <Route path='/store' element={<Store/>} />
           <Route path='/opportunity' element={<Opportunity/>} />
           <Route path='/service' element={<Service/>} />
-          <Route path='/register' element={<Register/>} />
+          <Route path='/register' element={<Register/>} >
+          </Route>
           <Route path='/login' element={<Login/>}/>
+          <Route path='/register-successfully' element={<Submission/>}/>
         </Routes>
       </Router>
 
