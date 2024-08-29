@@ -13,9 +13,10 @@ import Submission from './Components/Pages/Submission';
 
 
 
+
 function App() {
   return (
-    <div className="App ">
+    <div className="App  ">
 
       <Router>
 
@@ -33,6 +34,7 @@ function App() {
           <Route path='/register-successfully' element={<Submission/>}/>
         </Routes>
       </Router>
+
 
       
     </div>

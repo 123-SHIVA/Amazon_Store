@@ -37,7 +37,6 @@ function Register()
             mode: 'no-cors'
         })
         .then(() => {
-            alert("Thanks for submitting the form");
             navigate('/register-successfully')
            
         })
