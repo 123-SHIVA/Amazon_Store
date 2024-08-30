@@ -3,11 +3,6 @@ import eStoreLogo from '../../images/esStoreLogo.webp';
 import Footer2 from '../Footer/Footer2';
 import { useEffect, useState } from 'react';
 
-
-// https://docs.google.com/forms/d/e/1FAIpQLSdD9tnkNQ-_Qz59RmbglgZiq9gsxHRn97EHr8HejPPCERxJ4A/viewform?usp=pp_url&entry.1951104673=Neha&entry.1927189954=Baghel&entry.1526282246=nehabaghelcs190302@gmail.com&entry.2039390232=9399528945&entry.107078074=Bhopal&entry.1262906429=462003&entry.1651997529=India&entry.1411017782=1000&entry.321598628=Neha@123&entry.1728960141=Neha@123
-
-
-
 function Register()
 {
    
@@ -25,20 +20,21 @@ function Register()
             return;
         }
 
-        let url = 'https://docs.google.com/forms/d/e/1FAIpQLSdD9tnkNQ-_Qz59RmbglgZiq9gsxHRn97EHr8HejPPCERxJ4A/formResponse?'
+        let url = 'https://docs.google.com/forms/d/e/1FAIpQLSeW2Mwpir23awjq9GzcqCrdQxJMB6TmfeP_69gP4FMhGkEqGQ/formResponse?'
         
         let formData = new FormData();
         console.log(e.target.firstName.value)
-        formData.append("entry.1951104673",e.target.firstName.value);
-        formData.append('entry.1927189954',e.target.lastName.value)
-        formData.append('entry.1526282246',e.target.email.value)
-        formData.append('entry.2039390232',e.target.mobileNumber.value)
-        formData.append('entry.107078074',e.target.city.value)
-        formData.append('entry.1262906429',e.target.pinCode.value)
-        formData.append('entry.1651997529',e.target.country.value)
-        formData.append('entry.1411017782',e.target.investment.value)
+        formData.append("entry.954201680",e.target.firstName.value);
+        formData.append('entry.1886365113',e.target.lastName.value)
+        formData.append('entry.335443761',e.target.email.value)
+        formData.append('entry.1356113406',e.target.mobileNumber.value)
+
+        formData.append('entry.947283670',e.target.city.value)
+        formData.append('entry.818372992',e.target.pinCode.value)
+        formData.append('entry.1183901722',e.target.country.value)
+        formData.append('entry.134860747',e.target.investment.value)
         formData.append('entry.321598628',e.target.password.value)
-        formData.append('entry.1728960141',e.target.confirmPassword.value)
+        formData.append('entry.219340779',e.target.confirmPassword.value)
     
         fetch(url, {
             method: 'POST',
