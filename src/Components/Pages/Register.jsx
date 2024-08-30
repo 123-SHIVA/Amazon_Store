@@ -1,6 +1,7 @@
 import { Link,  useNavigate } from 'react-router-dom';
 import eStoreLogo from '../../images/esStoreLogo.webp';
 import Footer2 from '../Footer/Footer2';
+import { useEffect, useState } from 'react';
 
 
 // https://docs.google.com/forms/d/e/1FAIpQLSdD9tnkNQ-_Qz59RmbglgZiq9gsxHRn97EHr8HejPPCERxJ4A/viewform?usp=pp_url&entry.1951104673=Neha&entry.1927189954=Baghel&entry.1526282246=nehabaghelcs190302@gmail.com&entry.2039390232=9399528945&entry.107078074=Bhopal&entry.1262906429=462003&entry.1651997529=India&entry.1411017782=1000&entry.321598628=Neha@123&entry.1728960141=Neha@123
@@ -11,10 +12,18 @@ function Register()
 {
    
     const navigate = useNavigate()
-    async function handleSubmit(e)
+    const [isError, setIsError] = useState(false);
+
+  
+    function handleSubmit(e)
     {
         e.preventDefault();
         console.log("handle submit");
+        if(e.target.password.value!==e.target.confirmPassword.value)
+        {
+            setIsError(true)
+            return;
+        }
 
         let url = 'https://docs.google.com/forms/d/e/1FAIpQLSdD9tnkNQ-_Qz59RmbglgZiq9gsxHRn97EHr8HejPPCERxJ4A/formResponse?'
         
@@ -52,55 +61,56 @@ function Register()
                 <h1 className='text-black text-3xl font-semibold'>Create Account</h1>
                 <form onSubmit={handleSubmit} className=' text-xs text-black font-semibold '>
                     {/* --------------error box---------------- */}
-                        <div></div>
+                    <div className={` transition-all duration-300  my-4 bg-red-600/90 text-white flex justify-between p-2 items-center ${isError ? "opacity-100" : "opacity-0"}  `} >Password is not matched</div>
+
 
                         <div className='my-5'>
                             <label>First Name</label><br/>
-                            <input type='text' name='firstName' className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
+                            <input type='text' name='firstName' required className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
                         </div>
 
                         <div className='my-5'>
                             <label>Last Name</label><br/>
-                            <input type='text' name='lastName' className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
+                            <input type='text' name='lastName' required className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
                         </div>
 
                         <div className='my-5'>
                             <label>E-mail Address</label><br/>
-                            <input type='email' name='email' className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
+                            <input type='email' name='email' required className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
                         </div>
 
                         <div className='my-5'>
                             <label>Mobile Number</label><br/>
-                            <input type='text' name='mobileNumber' className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
+                            <input type='text' name='mobileNumber' required className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
                         </div>
 
                         <div className='my-5'>
                             <label>City</label><br/>
-                            <input type='text' name='city' className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
+                            <input type='text' name='city' required className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
                         </div>
 
                         <div className='my-5'>
                             <label>Pin code</label><br/>
-                            <input type='text' name='pinCode' className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
+                            <input type='text' name='pinCode' required className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
                         </div>
 
                         <div className='my-3'>
                             <label>Country</label><br/>
-                            <input type='text' name='country' className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
+                            <input type='text' name='country' required className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
                         </div>
                         <div className='my-3'>
                             <label>Investment Amount </label><br/>
-                            <input type='text' name='investment' className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
+                            <input type='text' name='investment' required className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
                         </div>
 
                         <div className='my-3'>
                             <label>Password</label><br/>
-                            <input type='password' name='password' className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
+                            <input type='password' name='password' required className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
                         </div>
 
                         <div className='my-3'>
                             <label>Confirm Password</label><br/>
-                            <input type='password' name='confirmPassword' className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
+                            <input type='password' name='confirmPassword' required className='outline-none border border-base-100/50 bg-transparent w-full p-2 my-1 focus:border-b-2 focus:border-b-red-600 transition-all duration-100' />
                         </div>
 
                         <div className='flex gap-3'>
