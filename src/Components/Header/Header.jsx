@@ -29,9 +29,9 @@ function Header(){
 
                 <div className="flex items-center gap-2">
                     <div className="text-2xl font-bold text-red-600  hover:animate-bounce "><MdOutlineEmail/></div>
-                    <a href="mailto:example@example.com"  className="leading-4">
+                    <a href="mailto:support@amazonslogistic.com"  className="leading-4">
                         <h3 className="font-semibold">Email Us</h3>
-                        <p>example@example.com</p>
+                        <p>support@amazonslogistic.com</p>
                     </a>
                 </div>
 
