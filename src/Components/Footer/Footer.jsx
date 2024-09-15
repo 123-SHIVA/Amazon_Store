@@ -60,7 +60,7 @@ function renderNavItems() {
             <Link to="/service" className="px-4 border-l-4  hover:text-red-600 hover:border-red-600 ">Service</Link>
            
             <div className="dropdown dropdown-hover px-4 border-l-4 ">
-                <li tabIndex={0} role="button" className=" hover:text-red-600 hover:border-red-600   "><Link to={"/register"} target="_blank" className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}>Store</Link></li>
+                <li tabIndex={0} role="button" className=" hover:text-red-600 hover:border-red-600   "><Link to={"/register"}  className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 `)}>Store</Link></li>
                 <ul tabIndex={0} className="dropdown-content menu z-[1] w-52 p-2 shadow ">
                     <div className="p-2 border-t-2 my-2 border-red-600 bg-white relative">
                         <div className="w-3 h-3 border-t-2 border-l-2 bg-white  border-red-500 rotate-45 absolute -top-2 left-3"></div>

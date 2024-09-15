@@ -24,7 +24,7 @@ function Header2() {
                             {renderNavItems()}
                         </ul>
 
-                        <Link to="/register" target="_blank" className="bg-red-600 py-2 px-4 text-sm text-white font-semibold hidden sm:block  hover:animate-bounce">
+                        <Link to="/register" className="bg-red-600 py-2 px-4 text-sm text-white font-semibold hidden sm:block  hover:animate-bounce">
                             Apply Now
 
                         </Link>

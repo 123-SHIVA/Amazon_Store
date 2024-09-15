@@ -37,9 +37,9 @@ function Header(){
 
                 <div className="flex items-center gap-2">
                     <div className="text-xl font-bold text-red-600  hover:animate-bounce"><FaPhone/></div>
-                    <a  href="tel:+1234567890" className="leading-4">
+                    <a  href="tel:+8367582309" className="leading-4">
                         <h3 className="font-semibold">Toll Us</h3>
-                        <p>123 456 7890</p>
+                        <p>8367582309</p>
                     </a>
                 </div>
                
