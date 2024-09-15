@@ -11,7 +11,7 @@ function Header(){
     
     return(
         <>
-        <div onClick={()=>setIsHeaderOpen(!isHeaderOpen)} className=" relative z-50 lg:hidden "><IoBookmarkSharp className="absolute text-red-600 text-7xl right-2"/><HiOutlineDotsVertical className="absolute text-3xl right-8 mt-2 text-white"/></div>
+        <div onClick={()=>setIsHeaderOpen(!isHeaderOpen)} className=" relative z-30 lg:hidden "><IoBookmarkSharp className="absolute text-red-600 text-7xl right-2"/><HiOutlineDotsVertical className="absolute text-3xl right-8 mt-2 text-white"/></div>
         <div className={` z-40 flex flex-col gap-5 py-8  lg:flex-row bg-white lg:bg-[#201E43]  p-5 text-[#7e858f] lg:text-white justify-between items-center md:px-20 xl:px-48 transition-all duration-200  absolute left-0 right-0 lg:relative  ${isHeaderOpen?"opacity-100":" opacity-0"} lg:opacity-100 ` }>
             <div className="flex  gap-3">
                 <div className="bg-red-600 p-1 rounded-full hover:bg-transparent hover:text-red-600 transition-all duration-200"><FaAmazon/></div>

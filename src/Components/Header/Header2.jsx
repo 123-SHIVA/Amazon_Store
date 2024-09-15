@@ -38,11 +38,16 @@ function Header2() {
 
                     {/* Drawer Navigation */}
                     <div className="drawer-side">
+                   
                         <ul className="menu w-[100vw] bg-white text-black lg:bg-transparent py-10 gap-3 text-sm  font-semibold min-h-full ">
                             <label htmlFor="my-drawer" className="drawer-overlay border flex justify-end px-5 text-2xl"><IoClose /></label>
+                            <Link to="/register" className="bg-red-600 mx-5s py-2 px-4 text-sm text-white font-semibold sm:hidden  hover:animate-bounce">
+                            Apply Now</Link>
                             {renderNavItems()}
                         </ul>
+                        
                     </div>
+                            
                 </div>
             </div>
         </div>
@@ -70,6 +75,7 @@ function renderNavItems() {
                     
                 </ul>
             </div>
+            
         </>
     );
 }
