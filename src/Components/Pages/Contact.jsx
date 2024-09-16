@@ -15,14 +15,13 @@ function Contact(){
                     <div className="flex flex-col gap-3 items-center ">
                         <img src={telephone} alt="telephone" className="lg:w-64 lg:h-52 md:w-44"/>
                         <h3 className="text-black text-sm">TOLL FREE</h3>
-                        <h1 className="text-2xl">1800 2020 014</h1>
-                        <p>+91 9876543210</p>
+                        <h1 className="text-2xl">+91 8367582309</h1>
                         <p>(Registered Customer)</p>
                     </div>
                     <div className="flex flex-col gap-3 items-center">
                         <img src={mail} alt="mail" className="lg:w-64 lg:h-52 md:w-44"/>
                         <h5 className="text-black text-sm">Mail</h5>
-                        <h4>support@logisticsamazone.in</h4>
+                        <h4>support@amazonlogistic.com</h4>
                     </div>
                     <div className="flex flex-col gap-3 items-center">
                         <img src={location} alt="location" className="lg:w-64 lg:h-52 md:w-44"/>

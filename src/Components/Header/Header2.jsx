@@ -40,7 +40,7 @@ function Header2() {
                     <div className="drawer-side">
                    
                         <ul className="menu w-[100vw] bg-white text-black lg:bg-transparent py-10 gap-3 text-sm  font-semibold min-h-full ">
-                            <label htmlFor="my-drawer" className="drawer-overlay border flex justify-end px-5 text-2xl"><IoClose /></label>
+                            <label htmlFor="my-drawer" className="drawer-overlay  flex justify-end px-5 text-2xl"><IoClose /></label>
                             <Link to="/register" className="bg-red-600 mx-5s py-2 px-4 text-sm text-white font-semibold sm:hidden  hover:animate-bounce">
                             Apply Now</Link>
                             {renderNavItems()}
@@ -65,7 +65,7 @@ function renderNavItems() {
             
             <div className="dropdown dropdown-hover mr-5 ">
                 
-                <li tabIndex={0} role="button" className="px-3  "><NavLink to={"/register"} target="_blank" className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 flex gap-3 items-center`)}>Store <IoIosArrowDown/></NavLink></li>
+                <li tabIndex={0} role="button" className="px-3"><NavLink to={"/register"} className={({ isActive }) => (`${isActive && "text-red-600 font-bold "} hover:text-red-600 flex gap-3 items-center`)}>Store <IoIosArrowDown/></NavLink></li>
                 <ul tabIndex={0} className="dropdown-content menu z-[1] w-52 p-2 shadow ">
                     <div className="p-2 border-t-2 my-2 border-red-600 bg-white relative">
                         <div className="w-3 h-3 border-t-2 border-l-2 bg-white border-red-500 rotate-45 absolute -top-2 left-3"></div>

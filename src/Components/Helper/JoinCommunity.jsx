@@ -1,5 +1,6 @@
 
 import { FaArrowRight } from "react-icons/fa6";
+import {Link} from 'react-router-dom';
 
 function JoinCommunity()
 {
@@ -11,7 +12,7 @@ function JoinCommunity()
                 <h2 className='text-2xl'>Partner With Us</h2>
                 <h4 className='text-lg tracking-[4px]'>Join the largest community​</h4>
                 
-                <a className='rounded-full bg-orange-400 text-white text-sm py-3  px-6 my-4 w-44 m-auto  flex items-center justify-between '>Register Now <FaArrowRight/></a>
+                <Link to="/register" className='rounded-full bg-orange-400 text-white text-sm py-3  px-6 my-4 w-44 m-auto  flex items-center justify-between '>Register Now <FaArrowRight/></Link>
                
 
             </section>

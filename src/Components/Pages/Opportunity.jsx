@@ -4,6 +4,7 @@ import ownerExpectImg from '../../images/ownerExpectImg.webp';
 import teamLeaderImg from '../../images/teamLeaderImg.webp';
 import thisOpportunityForYou from '../../images/thisOpportunityIsForYou.webp';
 import venImg from '../../images/venImg.jpeg';
+import { Link } from "react-router-dom";
 
 function Opportunity(){
     return(
@@ -20,9 +21,15 @@ function Opportunity(){
                     <img src={venImg} alt="ven img" />
                     <div className="text-center font-bold ">
                         <h2>Your success story starts here.</h2>
-                        <button className="bg-orange-400 my-5 py-2 px-4 text-white  hover:animate-bounce">
-                            Apply Now
+                        <div>
+
+                        <button className="bg-orange-400 my-5  text-center py-2 text-white  hover:animate-bounce">
+                           
+                            <Link to="/register" className="px-6 py-2 "> Apply Now
+                            </Link>
+
                         </button>
+                        </div>
                         <p className="text-sm font-semibold">Still have questions ? Check out our FAQs.</p>
                     </div>
                 </div>

@@ -80,7 +80,7 @@ function Home() {
                 </Swiper>
             </section>
 
-            <section className='lg:w-[80%]  m-auto my-10 flex flex-col md:flex-row border justify-center items-center text-[#54595F] '  >
+            <section className='lg:w-[80%]  m-auto my-10 flex flex-col md:flex-row  justify-center items-center text-[#54595F] '  >
                 <div className='max-w-[50%]  p-5 '>
                     <img src={logisticLogo} alt='logistic logo' className='w-full rounded-full border-4 border-orange-400' />
                 </div>
